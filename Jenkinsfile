@@ -4,6 +4,12 @@ def getDockerTag() {
 }
 pipeline{
 
+	agent {
+                docker {
+                image 'maven'
+                
+                }
+             }
       environment {
           Docker_tag = getDockerTag()
       }
